@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --primary: #333333;
+  --secondary: #bdbdbd;
+  --font-family: "Space Mono", monospace;
+
+  --h1-size-mobile: 2.875rem;
+  --font-size: 1.125rem;
+
+  --h1-size-desktop: 4rem;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+header {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+footer,
+footer a {
+  font-size: 14px;
+  color: #bdbdbd;
+  text-align: center;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: 65px auto 35px;
+  height: 100vh;
+}
+
+.main-content {
+  display: grid;
+  grid-template-rows: 40% 60%;
+}
+.main-content img {
+  align-self: center;
+  justify-self: center;
+  width: 286px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  margin-top: 20px;
+  margin-bottom: 10rem;
+}
+.article :is(h1, p, a) {
+  margin: 0 0.938rem;
+}
+.article h1 {
+  font-size: var(--h1-size-mobile);
+  font-weight: bold;
+  line-height: 4.438rem;
+  margin-top: -20px;
+  margin-bottom: 0.5rem;
+}
+.article p {
+  line-height: 1.688rem;
+  margin-bottom: 3rem;
+}
+
+.button-primary {
+  background: var(--primary);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-decoration: none;
+  padding: 22px 40px;
+
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-10px);
+  box-shadow: 2px 3px 1px var(--primary);
+}
+
+@media screen and (min-width: 968px) {
+  .main-content {
+    grid-template-rows: none;
+    grid-template-columns: 50% 50%;
+  }
+  .main-content img {
+    width: 540px;
+  }
+  .article {
+    margin: 0;
+    justify-content: center;
+  }
+  .article h1 {
+    font-size: var(--h1-size-desktop);
+    margin-bottom: 2.5rem;
+  }
+  .article p {
+    font-size: 1.5rem;
+    width: 400px;
+    line-height: 2.25rem;
+  }
+}
