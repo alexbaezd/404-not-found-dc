@@ -1,4 +1,6 @@
-<!-- Please update value in the {}  -->
+---
+permalink: /index.html
+---
 
 <h1 align="center">404 not found</h1>
 
